@@ -1,0 +1,86 @@
+﻿@page
+@model RegisterModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+       
+        /* Центрирование окна регистрации */
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Высота на весь экран */
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input, button, select {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .links {
+            margin-top: 10px;
+        }
+
+            .links a {
+                text-decoration: none;
+                color: #007BFF;
+            }
+
+                .links a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <!-- Форма регистрации -->
+    <div class="registration-form">
+        <form method="post">
+            <h2>Регистрация клиента</h2>
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="Email" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="Password" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="links">
+            <h3>Войти как:</h3>
+            <a href="/LoginClient">Клиент</a> | <a href="/LoginEmployee">Cотрудник</a>
+
+        </div>
+    </div>
+</body>
+</html>
